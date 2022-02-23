@@ -12,37 +12,37 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: _buildAppBar(),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const GoPremium(),
-          Container(
-            padding: const EdgeInsets.all(15),
-            child: const Text(
-              "Tasks",
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+        backgroundColor: Colors.white,
+        appBar: _buildAppBar(),
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const GoPremium(),
+            Container(
+              padding: const EdgeInsets.all(15),
+              child: const Text(
+                "Tasks",
+                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+              ),
             ),
-          ),
-          Expanded(
-            child: Tasks(),
-          )
-        ],
-      ),
-      /*bottomNavigationBar: _buildBottomNavigationBar(),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: FloatingActionButton(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-        elevation: 0,
-        backgroundColor: Colors.black,
-        onPressed: () {},
-        child: Icon(
-          Icons.add,
-          size: 40,
+            Expanded(
+              child: Tasks(),
+            )
+          ],
         ),
-      */
-    );
+        // bottomNavigationBar: _buildBottomNavigationBar(),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        floatingActionButton: FloatingActionButton(
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+          elevation: 0,
+          backgroundColor: Colors.black,
+          onPressed: () {},
+          child: Icon(
+            Icons.add,
+            size: 40,
+          ),
+        ));
   }
 
   /* Widget _buildBottomNavigationBar() {
