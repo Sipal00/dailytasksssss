@@ -27,19 +27,29 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final user = UserPreferences.getUser();
 
-    return ThemeProvider(
-      initTheme: user.isDarkMode ? MyThemes.darkTheme : MyThemes.lightTheme,
-      child: Builder(
-        builder: (context) => MaterialApp(
-          debugShowCheckedModeBanner: false,
-          //theme: ThemeProvider.of(context),
-          title: 'Task App',
-          home: Indexindex(),
-        ),
+    /// when use more than one provider, use multiprovider to wrap all others
+    return MultiProvider(
+      providers: [
+        Provider(
+            create: (_) => ThemeProvider(
+                  initTheme: user.isDarkMode
+                      ? MyThemes.darkTheme
+                      : MyThemes.lightTheme,
+                )),
+        ChangeNotifierProvider(create: (_) => TasksProvider())
+      ],
+      child: const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        //theme: ThemeProvider.of(context),
+        title: 'Task App',
+        home: Indexindex(),
       ),
     );
   }
 }
+
+
+
  /* Widget build(BuildContext context) => ChangeNotifierProvider(
         create: (context) => TasksProvider(),
         child: MaterialApp(
