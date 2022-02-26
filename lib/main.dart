@@ -30,20 +30,27 @@ class MyApp extends StatelessWidget {
     /// when use more than one provider, use multiprovider to wrap all others
     return MultiProvider(
       providers: [
-        Provider(
-            create: (_) => ThemeProvider(
-                  initTheme: user.isDarkMode
-                      ? MyThemes.darkTheme
-                      : MyThemes.lightTheme,
-                )),
-        ChangeNotifierProvider(create: (_) => TasksProvider())
+        // Provider(
+        //     create: (_) => themeProvider.ThemeProvider(
+        //           initTheme: user.isDarkMode
+        //               ? MyThemes.darkTheme
+        //               : MyThemes.lightTheme,
+        //         )),
+
+        ChangeNotifierProvider(create: (_) => TasksProvider()),
       ],
-      child: const MaterialApp(
-        debugShowCheckedModeBanner: false,
-        //theme: ThemeProvider.of(context),
-        title: 'Task App',
-        home: Indexindex(),
-      ),
+      child: ThemeProvider(
+          initTheme: MyThemes.lightTheme,
+          builder: (context, myTheme) {
+            return MaterialApp(
+              debugShowCheckedModeBanner: false,
+              // theme: ThemeProvider.themeOf(context).data,
+              title: 'Task App',
+              home: Builder(builder: (context) {
+                return Indexindex();
+              }),
+            );
+          }),
     );
   }
 }
