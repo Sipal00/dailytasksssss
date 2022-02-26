@@ -1,3 +1,4 @@
+import 'package:dailytasksssss/addTasks/addTasks.dart';
 import 'package:dailytasksssss/pageProf/page_pro.dart';
 import 'package:dailytasksssss/screens/home/home.dart';
 import 'package:flutter/material.dart';
@@ -35,6 +36,22 @@ class _IndexindexState extends State<Indexindex> {
                   label: "Home", icon: Icon(Icons.home_rounded, size: 30)),
               BottomNavigationBarItem(
                   label: "Person", icon: Icon(Icons.person_rounded, size: 30)),
-            ]));
+            ]),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        floatingActionButton: FloatingActionButton(
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+          elevation: 0,
+          backgroundColor: Colors.black,
+          onPressed: () => showDialog(
+            context: context,
+            builder: (context) => AddTasks(),
+            barrierDismissible: false,
+          ),
+          child: Icon(
+            Icons.add,
+            size: 40,
+          ),
+        ));
   }
 }

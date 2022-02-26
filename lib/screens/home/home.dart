@@ -1,3 +1,4 @@
+import 'package:dailytasksssss/addTasks/addTasks.dart';
 import 'package:dailytasksssss/screens/home/widgets/go_premium.dart';
 import 'package:dailytasksssss/screens/home/widgets/tasks.dart';
 import 'package:flutter/material.dart';
@@ -12,37 +13,42 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
-        appBar: _buildAppBar(),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const GoPremium(),
-            Container(
-              padding: const EdgeInsets.all(15),
-              child: const Text(
-                "Tasks",
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-              ),
+      backgroundColor: Colors.white,
+      appBar: _buildAppBar(),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const GoPremium(),
+          Container(
+            padding: const EdgeInsets.all(15),
+            child: const Text(
+              "Tasks",
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
             ),
-            Expanded(
-              child: Tasks(),
-            )
-          ],
-        ),
-        // bottomNavigationBar: _buildBottomNavigationBar(),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+          ),
+          Expanded(
+            child: Tasks(),
+          )
+        ],
+      ),
+      // bottomNavigationBar: _buildBottomNavigationBar(),
+      /*  floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButton(
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
           elevation: 0,
           backgroundColor: Colors.black,
-          onPressed: () {},
+          onPressed: () => showDialog(
+            context: context,
+            builder: (context) => AddTasks(),
+            barrierDismissible: false,
+          ),
           child: Icon(
             Icons.add,
             size: 40,
           ),
-        ));
+       */
+    );
   }
 
   /* Widget _buildBottomNavigationBar() {
@@ -96,7 +102,7 @@ AppBar _buildAppBar() {
         ),
         const SizedBox(width: 10),
         const Text(
-          "Hi, Sipal!",
+          "HI Sipal! ",
           style: TextStyle(
               color: Colors.black, fontSize: 27, fontWeight: FontWeight.bold),
         ),

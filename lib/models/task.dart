@@ -3,6 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Task {
+  int? id;
+  DateTime? createdTime;
   IconData? iconData;
   String? title;
   Color? bgColor;
@@ -10,10 +12,16 @@ class Task {
   Color? btnColor;
   num? left;
   num? done;
+  String? description;
   List<Map<String, dynamic>>? desc;
   bool isLast;
+
+  var isDone;
   Task(
-      {this.iconColor,
+      {this.id,
+      this.description,
+      this.createdTime,
+      this.iconColor,
       this.title,
       this.bgColor,
       this.btnColor,

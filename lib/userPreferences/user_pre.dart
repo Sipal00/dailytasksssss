@@ -10,7 +10,8 @@ class UserPreferences {
 
   static const _keyUser = 'user';
   static const myUser = User(
-    imagePath: '"C:\Users\sc217\Desktop\sipal5\weeee code\25.jpg"',
+    imagePath:
+        ' https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png  ',
     name: 'Sipal Salam',
     email: 'sipalsalam225@gmail.com',
     about: "",

@@ -1,11 +1,14 @@
-
 import 'package:animated_theme_switcher/animated_theme_switcher.dart';
+import 'package:dailytasksssss/addTasks/provider/taskProvider.dart';
 import 'package:dailytasksssss/appView.dart';
+import 'package:dailytasksssss/pageProf/index.dart';
+import 'package:dailytasksssss/screens/home/home.dart';
 import 'package:dailytasksssss/themes.dart';
 import 'package:dailytasksssss/userPreferences/user_pre.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:provider/provider.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,9 +34,21 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           //theme: ThemeProvider.of(context),
           title: 'Task App',
-          home: AppView(),
+          home: Indexindex(),
         ),
       ),
     );
   }
 }
+ /* Widget build(BuildContext context) => ChangeNotifierProvider(
+        create: (context) => TasksProvider(),
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+            primarySwatch: Colors.blue,
+            scaffoldBackgroundColor: Color(0xFFf6f5ee),
+          ),
+          home: Indexindex(),
+        ),
+      );
+  */

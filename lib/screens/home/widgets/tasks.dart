@@ -1,15 +1,20 @@
 import 'dart:ui';
+import 'package:dailytasksssss/addTasks/provider/taskProvider.dart';
 import 'package:dailytasksssss/models/task.dart';
 import 'package:dailytasksssss/screens/detail/detail.dart';
 
 import 'package:flutter/material.dart';
 
 import 'package:dotted_border/dotted_border.dart';
+import 'package:provider/provider.dart';
 
 class Tasks extends StatelessWidget {
   final tasksList = Task.generateTasks();
   @override
   Widget build(BuildContext context) {
+    //  final provider = Provider.of<TasksProvider>(context);
+    // final tasks = provider.tasks;
+
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 15),
       child: GridView.builder(

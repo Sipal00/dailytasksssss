@@ -1,5 +1,6 @@
 import 'dart:ffi';
 
+import 'package:dailytasksssss/screens/home/widgets/gooper.dart';
 import 'package:flutter/material.dart';
 
 class GoPremium extends StatefulWidget {
@@ -60,7 +61,10 @@ class _GoPremiumState extends State<GoPremium> {
               bottom: 30,
               right: 30,
               child: GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => gopremium()));
+                },
                 child: Container(
                   padding: EdgeInsets.all(10),
                   decoration: BoxDecoration(
