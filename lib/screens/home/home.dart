@@ -1,8 +1,12 @@
 import 'package:dailytasksssss/addTasks/addTasks.dart';
 import 'package:dailytasksssss/screens/home/widgets/go_premium.dart';
 import 'package:dailytasksssss/screens/home/widgets/tasks.dart';
+import 'package:dailytasksssss/themes.dart';
+import 'package:dailytasksssss/userPreferences/user_pre.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:animated_theme_switcher/animated_theme_switcher.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -12,27 +16,28 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: _buildAppBar(),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const GoPremium(),
-          Container(
-            padding: const EdgeInsets.all(15),
-            child: const Text(
-              "Tasks",
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+    return ThemeSwitchingArea(child: Builder(builder: (context) {
+      return Scaffold(
+        backgroundColor: Colors.white,
+        appBar: _buildAppBar(),
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const GoPremium(),
+            Container(
+              padding: const EdgeInsets.all(15),
+              child: const Text(
+                "Tasks",
+                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+              ),
             ),
-          ),
-          Expanded(
-            child: Tasks(),
-          )
-        ],
-      ),
-      // bottomNavigationBar: _buildBottomNavigationBar(),
-      /*  floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+            Expanded(
+              child: Tasks(),
+            )
+          ],
+        ),
+        // bottomNavigationBar: _buildBottomNavigationBar(),
+        /*  floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButton(
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
@@ -48,10 +53,10 @@ class _HomePageState extends State<HomePage> {
             size: 40,
           ),
        */
-    );
-  }
+      );
+    }
 
-  /* Widget _buildBottomNavigationBar() {
+        /* Widget _buildBottomNavigationBar() {
     return Container(
         decoration: BoxDecoration(
             borderRadius: const BorderRadius.only(
@@ -83,37 +88,73 @@ class _HomePageState extends State<HomePage> {
               ]),
         ));
  */
+        ));
+  }
 
+  AppBar _buildAppBar() {
+    return AppBar(
+      backgroundColor: Colors.white,
+      elevation: 0,
+      title: Row(
+        children: [
+          Container(
+            height: 45,
+            width: 45,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image.asset("asset/images/21.jpg"),
+            ),
+          ),
+          const SizedBox(width: 10),
+          const Text(
+            "HI Sipal! ",
+            style: TextStyle(
+                color: Colors.black, fontSize: 27, fontWeight: FontWeight.bold),
+          ),
+        ],
+      ),
+      actions: [
+        Icon(
+          Icons.more_vert,
+          color: Colors.black,
+          size: 40,
+        )
+      ],
+    );
+  }
 }
 
-AppBar _buildAppBar() {
-  return AppBar(
-    backgroundColor: Colors.white,
-    elevation: 0,
-    title: Row(
-      children: [
-        Container(
-          height: 45,
-          width: 45,
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(10),
-            child: Image.asset("asset/images/21.jpg"),
+
+   /* final user = UserPreferences.getUser();
+
+    final isDarkMode = user.isDarkMode;
+    final icon =
+        isDarkMode ? CupertinoIcons.sun_max : CupertinoIcons.moon_stars;
+
+    return AppBar(
+      leading: BackButton(
+        color: Colors.black,
+      ),
+      backgroundColor: Colors.transparent,
+      elevation: 0,
+      actions: [
+        ThemeSwitcher(
+          builder: (context) => IconButton(
+            icon: Icon(
+              icon,
+              color: Colors.black,
+            ),
+            onPressed: () {
+              final theme =
+                  isDarkMode ? MyThemes.lightTheme : MyThemes.darkTheme;
+
+              final switcher = ThemeSwitcher.of(context);
+              switcher.changeTheme(theme: theme);
+            },
           ),
         ),
-        const SizedBox(width: 10),
-        const Text(
-          "HI Sipal! ",
-          style: TextStyle(
-              color: Colors.black, fontSize: 27, fontWeight: FontWeight.bold),
-        ),
       ],
-    ),
-    actions: [
-      Icon(
-        Icons.more_vert,
-        color: Colors.black,
-        size: 40,
-      )
-    ],
-  );
+    );
+  }
 }
+*/

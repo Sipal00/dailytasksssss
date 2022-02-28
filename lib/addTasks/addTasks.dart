@@ -24,11 +24,12 @@ class _AddTasksState extends State<AddTasks> {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
+              const Text(
                 'Add Tasks',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 22,
+                  
                 ),
               ),
               const SizedBox(height: 8),
@@ -54,6 +55,7 @@ class _AddTasksState extends State<AddTasks> {
       );
       final provider = Provider.of<TasksProvider>(context, listen: false);
       provider.addTask(task);
+      
       Navigator.of(context).pop();
     }
   }

@@ -12,8 +12,8 @@ class Tasks extends StatelessWidget {
   final tasksList = Task.generateTasks();
   @override
   Widget build(BuildContext context) {
-    //  final provider = Provider.of<TasksProvider>(context);
-    // final tasks = provider.tasks;
+    final provider = Provider.of<TasksProvider>(context);
+    final tasks = provider.tasks;
 
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 15),

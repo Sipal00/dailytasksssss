@@ -1,4 +1,3 @@
- 
 import 'package:animated_theme_switcher/animated_theme_switcher.dart';
 import 'package:dailytasksssss/model/user_model.dart';
 import 'package:dailytasksssss/pageProf/edit_prof.dart';

@@ -151,19 +151,6 @@ class TasksProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  void removeTask(Task task) {
-    _tasks.remove(task);
-
-    notifyListeners();
-  }
-
-  bool toggleTaskStatus(Task task) {
-    task.isDone = !task.isDone;
-    notifyListeners();
-
-    return task.isDone;
-  }
-
   void updateTask(Task task, String title, String description) {
     task.title = title;
     task.desc = description as List<Map<String, dynamic>>?;

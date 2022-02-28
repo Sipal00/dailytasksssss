@@ -27,6 +27,37 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final user = UserPreferences.getUser();
 
+    /// when use more than one provider, use multiprovider to wrap all others
+    return MultiProvider(
+      providers: [
+        // Provider(
+        //     create: (_) => themeProvider.ThemeProvider(
+        //           initTheme: user.isDarkMode
+        //               ? MyThemes.darkTheme
+        //               : MyThemes.lightTheme,
+        //         )),
+
+        ChangeNotifierProvider(create: (_) => TasksProvider()),
+      ],
+      child: ThemeProvider(
+          initTheme: MyThemes.lightTheme,
+          builder: (context, myTheme) {
+            return MaterialApp(
+              debugShowCheckedModeBanner: false,
+              // theme: ThemeProvider.themeOf(context).data,
+              title: 'Task App',
+              home: Builder(builder: (context) {
+                return Indexindex();
+              }),
+            );
+          }),
+    );
+  }
+}
+
+
+    /*final user = UserPreferences.getUser();
+
     return ThemeProvider(
       initTheme: user.isDarkMode ? MyThemes.darkTheme : MyThemes.lightTheme,
       child: Builder(
@@ -38,8 +69,8 @@ class MyApp extends StatelessWidget {
         ),
       ),
     );
-  }
-}
+  */
+
  /* Widget build(BuildContext context) => ChangeNotifierProvider(
         create: (context) => TasksProvider(),
         child: MaterialApp(

@@ -40,7 +40,7 @@ class TasksFormWidget extends StatelessWidget {
           }
           return null;
         },
-        decoration: InputDecoration(
+        decoration: const InputDecoration(
           border: UnderlineInputBorder(),
           labelText: 'Title',
         ),
@@ -50,7 +50,7 @@ class TasksFormWidget extends StatelessWidget {
         maxLines: 3,
         initialValue: description,
         onChanged: onChangedDescription,
-        decoration: InputDecoration(
+        decoration: const InputDecoration(
           border: UnderlineInputBorder(),
           labelText: 'Description',
         ),
