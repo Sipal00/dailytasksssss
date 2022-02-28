@@ -54,32 +54,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
-    /*final user = UserPreferences.getUser();
-
-    return ThemeProvider(
-      initTheme: user.isDarkMode ? MyThemes.darkTheme : MyThemes.lightTheme,
-      child: Builder(
-        builder: (context) => MaterialApp(
-          debugShowCheckedModeBanner: false,
-          //theme: ThemeProvider.of(context),
-          title: 'Task App',
-          home: Indexindex(),
-        ),
-      ),
-    );
-  */
-
- /* Widget build(BuildContext context) => ChangeNotifierProvider(
-        create: (context) => TasksProvider(),
-        child: MaterialApp(
-          debugShowCheckedModeBanner: false,
-          theme: ThemeData(
-            primarySwatch: Colors.blue,
-            scaffoldBackgroundColor: Color(0xFFf6f5ee),
-          ),
-          home: Indexindex(),
-        ),
-      );
-  */
