@@ -65,13 +65,13 @@ class _EditProfilePageState extends State<EditProfilePage> {
                   text: user.email,
                   onChanged: (email) => user = user.copy(email: email),
                 ),
-                /*const SizedBox(height: 24),
+                const SizedBox(height: 24),
                 TextFieldWidget(
                   label: 'About',
                   text: user.about,
                   maxLines: 5,
                   onChanged: (about) => user = user.copy(about: about),
-                */
+                ),
                 const SizedBox(height: 24),
                 ButtonWidget(
                   text: 'Save',

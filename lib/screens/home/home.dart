@@ -127,36 +127,4 @@ class _HomePageState extends State<HomePage> {
 }
 
 
-   /* final user = UserPreferences.getUser();
-
-    final isDarkMode = user.isDarkMode;
-    final icon =
-        isDarkMode ? CupertinoIcons.sun_max : CupertinoIcons.moon_stars;
-
-    return AppBar(
-      leading: BackButton(
-        color: Colors.black,
-      ),
-      backgroundColor: Colors.transparent,
-      elevation: 0,
-      actions: [
-        ThemeSwitcher(
-          builder: (context) => IconButton(
-            icon: Icon(
-              icon,
-              color: Colors.black,
-            ),
-            onPressed: () {
-              final theme =
-                  isDarkMode ? MyThemes.lightTheme : MyThemes.darkTheme;
-
-              final switcher = ThemeSwitcher.of(context);
-              switcher.changeTheme(theme: theme);
-            },
-          ),
-        ),
-      ],
-    );
-  }
-}
-*/
+    

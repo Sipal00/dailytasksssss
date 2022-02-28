@@ -9,7 +9,7 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:provider/provider.dart';
 
 class Tasks extends StatelessWidget {
-  final tasksList = Task.generateTasks();
+  //final tasksList = Task.generateTasks();
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<TasksProvider>(context);
@@ -18,12 +18,12 @@ class Tasks extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 15),
       child: GridView.builder(
-          itemCount: tasksList.length,
+          itemCount: tasks.length,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2, crossAxisSpacing: 10, mainAxisSpacing: 10),
-          itemBuilder: (context, index) => tasksList[index].isLast
+          itemBuilder: (context, index) => tasks[index].isLast
               ? _buildAddTask()
-              : _buildTask(context, tasksList[index])),
+              : _buildTask(context, tasks[index])),
     );
   }
 

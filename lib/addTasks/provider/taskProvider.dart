@@ -140,7 +140,7 @@ class TasksProvider extends ChangeNotifier {
     ),
     Task(isLast: true)
   ];
-  List<Task> get tasks => _tasks.where((task) => task.isDone == false).toList();
+  List<Task> get tasks => _tasks.toList();
 
   List<Task> get tasksCompleted =>
       _tasks.where((task) => task.isDone == true).toList();

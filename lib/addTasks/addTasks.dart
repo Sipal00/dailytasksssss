@@ -1,5 +1,6 @@
 import 'package:dailytasksssss/addTasks/TasksFormWidget.dart';
 import 'package:dailytasksssss/addTasks/provider/taskProvider.dart';
+import 'package:dailytasksssss/constants/colors.dart';
 import 'package:dailytasksssss/models/task.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -29,7 +30,6 @@ class _AddTasksState extends State<AddTasks> {
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 22,
-                  
                 ),
               ),
               const SizedBox(height: 8),
@@ -49,13 +49,20 @@ class _AddTasksState extends State<AddTasks> {
       return;
     } else {
       final task = Task(
+        iconData: Icons.favorite_border,
         title: title,
         description: description,
+        bgColor: kRedLight,
+        iconColor: kRedDark,
+        btnColor: kRed,
+        left: 0,
+        done: 10,
+        desc: [],
         createdTime: DateTime.now(),
       );
       final provider = Provider.of<TasksProvider>(context, listen: false);
       provider.addTask(task);
-      
+
       Navigator.of(context).pop();
     }
   }
