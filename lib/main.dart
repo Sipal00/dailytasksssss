@@ -47,7 +47,7 @@ class MyApp extends StatelessWidget {
               // theme: ThemeProvider.themeOf(context).data,
               title: 'Task App',
               home: Builder(builder: (context) {
-                return Indexindex();
+                return AppView();
               }),
             );
           }),
