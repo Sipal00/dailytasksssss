@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
     return ThemeSwitchingArea(
       child: Builder(builder: (context) {
         return Scaffold(
-          backgroundColor: Colors.white,
+          // backgroundColor: Colors.white,
           appBar: _buildAppBar(),
           body: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -125,6 +125,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
-
-    
