@@ -48,9 +48,10 @@ class _IndexindexState extends State<Indexindex> {
             builder: (context) => AddTasks(),
             barrierDismissible: false,
           ),
-          child: Icon(
+          child:const Icon(
             Icons.add,
             size: 40,
+            color: Colors.white,
           ),
         ));
   }

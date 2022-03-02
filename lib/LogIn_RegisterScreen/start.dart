@@ -4,30 +4,30 @@ import 'package:flutter_signin_button/flutter_signin_button.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class Start extends StatelessWidget {
-  // final FirebaseAuth _auth = FirebaseAuth.instance;
+    final FirebaseAuth _auth = FirebaseAuth.instance;
 
-  // Future<UserCredential> googleSignIn() async {
-  //   GoogleSignIn googleSignIn = GoogleSignIn();
-  //   GoogleSignInAccount? googleUser = await googleSignIn.signIn();
-  //   if (googleUser != null) {
-  //     GoogleSignInAuthentication googleAuth = await googleUser.authentication;
+ Future<UserCredential> googleSignIn(context) async {
+    GoogleSignIn googleSignIn = GoogleSignIn();
+  GoogleSignInAccount? googleUser = await googleSignIn.signIn();
+   if (googleUser != null) {
+    GoogleSignInAuthentication googleAuth = await googleUser.authentication;
 
-  //     if (googleAuth.idToken != null && googleAuth.accessToken != null) {
-  //       final AuthCredential credential = GoogleAuthProvider.credential(
-  //           accessToken: googleAuth.accessToken, idToken: googleAuth.idToken);
+   if (googleAuth.idToken != null && googleAuth.accessToken != null) {
+       final AuthCredential credential = GoogleAuthProvider.credential(
+          accessToken: googleAuth.accessToken, idToken: googleAuth.idToken);
 
-  //       final UserCredential user =
-  //           await _auth.signInWithCredential(credential);
+        final UserCredential user =
+            await _auth.signInWithCredential(credential);
 
-  //       await Navigator.pushReplacementNamed(context, "/");
+      await Navigator.pushReplacementNamed(context, "/");
 
-  //       return user;
-  //     } else {
-  //       throw StateError('Missing Google Auth Token');
-  //     }
-  //   } else
-  //     throw StateError('Sign in Aborted');
-  // }
+       return user;
+      } else {
+        throw StateError('Missing Google Auth Token');
+      }
+    } else
+     throw StateError('Sign in Aborted');
+ }
 
   // navigateToLogin() async {
   //   Navigator.pushReplacementNamed(context, "/Login");
@@ -106,8 +106,8 @@ class Start extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 40.0),
-            // SignInButton(Buttons.Google,
-            //     text: "Sign up with Google", onPressed: googleSignIn)
+            SignInButton(Buttons.Google,
+                text: "Sign up with Google", onPressed: ()=> googleSignIn(context))
           ],
         ),
       ),
