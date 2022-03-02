@@ -1,4 +1,5 @@
 import 'package:animated_theme_switcher/animated_theme_switcher.dart';
+import 'package:dailytasksssss/LogIn_RegisterScreen/Login.dart';
 import 'package:dailytasksssss/addTasks/provider/taskProvider.dart';
 import 'package:dailytasksssss/appView.dart';
 import 'package:dailytasksssss/pageProf/index.dart';
@@ -47,7 +48,7 @@ class MyApp extends StatelessWidget {
               // theme: ThemeProvider.themeOf(context).data,
               title: 'Task App',
               home: Builder(builder: (context) {
-                return AppView();
+                return Login();
               }),
             );
           }),
