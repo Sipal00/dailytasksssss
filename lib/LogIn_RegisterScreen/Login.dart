@@ -122,7 +122,7 @@ class _LoginState extends State<Login> {
                                   email: email.text, password: pass.text);
 
                               Navigator.pushReplacementNamed(
-                                  context, '/HomePage');
+                                  context, '/Indexindex');
                             }
                           },
                           child: const Text('LOGIN'),

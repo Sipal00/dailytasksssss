@@ -121,7 +121,7 @@ class _SignUpState extends State<SignUp> {
                                   email: email.text, password: pass.text);
                             }
                             Navigator.pushReplacementNamed(
-                                context, '/HomePage');
+                                context, '/Indexindex');
                           },
                           child: const Text('SIGNUP'),
                           style: ElevatedButton.styleFrom(

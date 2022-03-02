@@ -21,29 +21,12 @@ class Tasks extends StatelessWidget {
         itemCount: tasks.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2, crossAxisSpacing: 10, mainAxisSpacing: 10),
-        itemBuilder: (context, index) => tasks[index].isLast
-            ? _buildAddTask()
-            : _buildTask(
-                context,
-                tasks[index],
-              ),
+        itemBuilder: (context, index) => _buildTask(
+          context,
+          tasks[index],
+        ),
       ),
     );
-  }
-
-  Widget _buildAddTask() {
-    return DottedBorder(
-        borderType: BorderType.RRect,
-        radius: Radius.circular(25),
-        dashPattern: [10, 10],
-        color: Colors.grey,
-        strokeWidth: 2,
-        child: Center(
-          child: Text(
-            "+ Add",
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-          ),
-        ));
   }
 
   Widget _buildTask(BuildContext context, Task task) {

@@ -21,7 +21,7 @@ class _AppViewState extends State<AppView> {
         theme: ThemeData.dark(),
         debugShowCheckedModeBanner: false,
         title: 'Task App',
-        initialRoute: '/HomePage',
+        initialRoute: '/',
         routes: {
           "/": (BuildContext context) => Start(),
           "/Login": (BuildContext context) => Login(),

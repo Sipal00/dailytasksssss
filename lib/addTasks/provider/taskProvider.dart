@@ -138,7 +138,7 @@ class TasksProvider extends ChangeNotifier {
       left: 0,
       done: 0,
     ),
-    Task(isLast: true)
+   
   ];
   List<Task> get tasks => _tasks.toList();
 
