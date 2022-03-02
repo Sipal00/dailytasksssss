@@ -18,15 +18,16 @@ class _AppViewState extends State<AppView> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        theme: ThemeData.dark(),
         debugShowCheckedModeBanner: false,
         title: 'Task App',
-        initialRoute: '/',
+        initialRoute: '/HomePage',
         routes: {
           "/": (BuildContext context) => Start(),
           "/Login": (BuildContext context) => Login(),
           "/SignUp": (BuildContext context) => SignUp(),
           "/LogedIN": (BuildContext context) => LogedIn(),
-          "/Home Page": (BuildContext context) => HomePage(),
+          "/HomePage": (BuildContext context) => HomePage(),
           "/profilePage": (BuildContext context) => ProfilePage(),
           "/Indexindex": (BuildContext context) => Indexindex(),
         });

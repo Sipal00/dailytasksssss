@@ -18,12 +18,16 @@ class Tasks extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 15),
       child: GridView.builder(
-          itemCount: tasks.length,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2, crossAxisSpacing: 10, mainAxisSpacing: 10),
-          itemBuilder: (context, index) => tasks[index].isLast
-              ? _buildAddTask()
-              : _buildTask(context, tasks[index])),
+        itemCount: tasks.length,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2, crossAxisSpacing: 10, mainAxisSpacing: 10),
+        itemBuilder: (context, index) => tasks[index].isLast
+            ? _buildAddTask()
+            : _buildTask(
+                context,
+                tasks[index],
+              ),
+      ),
     );
   }
 
