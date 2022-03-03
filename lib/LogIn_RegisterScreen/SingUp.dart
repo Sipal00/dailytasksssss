@@ -119,9 +119,10 @@ class _SignUpState extends State<SignUp> {
                             if (_formKey.currentState!.validate()) {
                               await _auth.createUserWithEmailAndPassword(
                                   email: email.text, password: pass.text);
+                                  
                             }
                             Navigator.pushReplacementNamed(
-                                context, '/Indexindex');
+                                context, '/LogedIN');
                           },
                           child: const Text('SIGNUP'),
                           style: ElevatedButton.styleFrom(

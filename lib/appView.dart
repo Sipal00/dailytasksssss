@@ -18,7 +18,7 @@ class _AppViewState extends State<AppView> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        theme: ThemeData.dark(),
+        theme: ThemeData.light(),
         debugShowCheckedModeBanner: false,
         title: 'Task App',
         initialRoute: '/',

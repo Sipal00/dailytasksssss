@@ -104,12 +104,12 @@ class _HomePageState extends State<HomePage> {
             width: 45,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10),
-              child: Image.asset("asset/images/21.jpg"),
+              child: Image.asset("asset/images/13.png"),
             ),
           ),
           const SizedBox(width: 10),
-          const Text(
-            "HI Sipal! ",
+          Text(
+            'Daily Tasks',
             style: TextStyle(
                 color: Colors.black, fontSize: 27, fontWeight: FontWeight.bold),
           ),
