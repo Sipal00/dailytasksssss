@@ -62,7 +62,7 @@ class _SignUpState extends State<SignUp> {
             child: Column(
               children: <Widget>[
                 Container(
-                  height: 350,
+                  height: 300,
                   child: Image.asset("asset/images/9.png"),
                 ),
                 Container(

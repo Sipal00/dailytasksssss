@@ -78,7 +78,7 @@ class _LoginState extends State<Login> {
             child: Column(
               children: <Widget>[
                 Container(
-                  height: 400,
+                  height: 300,
                   child: Image.asset("asset/images/6.png"),
                 ),
                 Container(

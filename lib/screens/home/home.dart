@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
     return ThemeSwitchingArea(
       child: Builder(builder: (context) {
         return Scaffold(
-          // backgroundColor: Colors.white,
+          //backgroundColor: Colors.white,
           appBar: _buildAppBar(),
           body: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -100,18 +100,18 @@ class _HomePageState extends State<HomePage> {
       title: Row(
         children: [
           Container(
-            height: 50,
-            width: 50,
+            height: 100,
+            width: 100,
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-              child: Image.asset("asset/images/14.jpg"),
+              borderRadius: BorderRadius.circular(25),
+              child: Image.asset("asset/images/14.png"),
             ),
           ),
-          const SizedBox(width: 10),
+          const SizedBox(width: 30),
           const Text(
             "Daily Tasks ",
             style: TextStyle(
-                color: Colors.black, fontSize: 15, fontWeight: FontWeight.bold),
+                color: Colors.black, fontSize: 25, fontWeight: FontWeight.bold),
           ),
         ],
       ),

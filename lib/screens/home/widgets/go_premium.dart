@@ -13,11 +13,14 @@ class GoPremium extends StatefulWidget {
 class _GoPremiumState extends State<GoPremium> {
   @override
   Widget build(BuildContext context) {
+    
     return GestureDetector(
       onTap: () {},
+      
       child: Container(
         child: Stack(
           children: [
+        
             Container(
               margin: EdgeInsets.all(15),
               padding: EdgeInsets.all(20),
