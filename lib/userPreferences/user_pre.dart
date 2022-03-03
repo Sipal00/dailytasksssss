@@ -13,8 +13,8 @@ class UserPreferences {
     imagePath:
         ' https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png  ',
     name: 'Sipal Salam',
-    email: 'sipalsalam225@gmail.com',
-    about: "",
+    email: 'sipalsalam@gmail.com',
+    about: ";;;;;;;;;;;;;;;;;;;;;",
     isDarkMode: false,
   );
 

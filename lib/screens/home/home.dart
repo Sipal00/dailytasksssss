@@ -100,18 +100,18 @@ class _HomePageState extends State<HomePage> {
       title: Row(
         children: [
           Container(
-            height: 45,
-            width: 45,
+            height: 50,
+            width: 50,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10),
-              child: Image.asset("asset/images/21.jpg"),
+              child: Image.asset("asset/images/14.jpg"),
             ),
           ),
           const SizedBox(width: 10),
           const Text(
-            "HI Sipal! ",
+            "Daily Tasks ",
             style: TextStyle(
-                color: Colors.black, fontSize: 27, fontWeight: FontWeight.bold),
+                color: Colors.black, fontSize: 15, fontWeight: FontWeight.bold),
           ),
         ],
       ),

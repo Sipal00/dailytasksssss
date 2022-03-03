@@ -70,7 +70,8 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('login'),
+          title: Text('LOG IN'),
+          backgroundColor: Colors.black,
         ),
         body: SingleChildScrollView(
           child: Container(
@@ -122,7 +123,7 @@ class _LoginState extends State<Login> {
                                   email: email.text, password: pass.text);
 
                               Navigator.pushReplacementNamed(
-                                  context, '/Indexindex');
+                                  context, '/LogedIn');
                             }
                           },
                           child: const Text('LOGIN'),
@@ -153,14 +154,5 @@ class _LoginState extends State<Login> {
             ),
           ),
         ));
-  }
-}
-
-class forgetPassword extends StatelessWidget {
-  const forgetPassword({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }

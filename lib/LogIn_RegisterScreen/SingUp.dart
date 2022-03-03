@@ -54,7 +54,8 @@ class _SignUpState extends State<SignUp> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('signup'),
+          title: Text('SINGN UP'),
+          backgroundColor: Colors.black,
         ),
         body: SingleChildScrollView(
           child: Container(
@@ -120,8 +121,7 @@ class _SignUpState extends State<SignUp> {
                               await _auth.createUserWithEmailAndPassword(
                                   email: email.text, password: pass.text);
                             }
-                            Navigator.pushReplacementNamed(
-                                context, '/Indexindex');
+                            Navigator.pushReplacementNamed(context, '/LogedIn');
                           },
                           child: const Text('SIGNUP'),
                           style: ElevatedButton.styleFrom(
