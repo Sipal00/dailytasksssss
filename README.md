@@ -18,6 +18,5 @@ Tasks is a beautifully simple, free Tasks list and reminder app that will help k
 
 
 ## VEDIO
-
-Uploading 2022-03-09_23-00-21-440.mp4…
+ 
 
